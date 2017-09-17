@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.objectFactory" value="spring" />
+<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+<constant name="struts.devMode" value="false" />
+<package name="login" namespace="/" extends="struts-default">
+	<action name="login" class="lzf.action.UserAction" method="doLogin">
+		<result name="success">/loginSuccess.jsp</result>
+		<result name="fail">/loginFail.jsp</result>
+	</action>
+<!-- 	<action name="register" class="lzf.action.UserAction" method="doRegister"> -->
+<!-- 		<result name="success">/registerSuccess.jsp</result> -->
+<!-- 		<result name="fail">/registerFail.jsp</result> -->
+<!-- 	</action> -->
+</package>
+<package name="register" namespace="/" extends="struts-default">
+	<action name="register" class="lzf.action.UserAction" method="doRegister">
+		<result name="success">/registerSuccess.jsp</result>
+		<result name="fail">/registerFail.jsp</result>
+	</action>
+</package>
+<package name="leaveMessage" namespace="/" extends="struts-default">
+	<action name="leaveMessage" class="lzf.action.UserAction" method="leaveMessage">
+		<result name="success">/leaveMessageSuccess.jsp</result>
+	</action>
+</package>
+<package name="getAllMessage" namespace="/" extends="struts-default">
+	<action name="getAllMessage" class="lzf.action.UserAction" method="getAllMessage">
+		<result name="success">/getAllMessage.jsp</result>
+	</action>
+</package>
+<package name="getSingleMessage" namespace="/" extends="struts-default">
+	<action name="getSingleMessage" class="lzf.action.UserAction" method="getSingleMessage">
+		<result name="success">/getSingleMessage.jsp</result>
+	</action>
+</package>
+<package name="comment" namespace="/" extends="struts-default">
+	<action name="comment" class="lzf.action.UserAction" method="doComment">
+		<result name="success">/commentSuccess.jsp</result>
+	</action>
+</package>
+<package name="myMessage" namespace="/" extends="struts-default">
+	<action name="myMessage" class="lzf.action.UserAction" method="getMyMessage">
+		<result name="success">/myMessage.jsp</result>
+	</action>
+</package>
+<package name="myComment" namespace="/" extends="struts-default">
+	<action name="myComment" class="lzf.action.UserAction" method="getMyComment">
+		<result name="success">/myComment.jsp</result>
+	</action>
+</package>
+<package name="delComment" namespace="/" extends="struts-default">
+	<action name="delComment" class="lzf.action.UserAction" method="doDelComment">
+		<result name="success">/delSuccess.jsp</result>
+	</action>
+</package>
+<package name="modifyUserInfoPage" namespace="/" extends="struts-default">
+	<action name="modifyUserInfoPage" class="lzf.action.UserAction" method="modifyUserInfoPage">
+		<result name="success">/modifyUserInfo.jsp</result>
+	</action>
+</package>
+<package name="modifyUserInfo" namespace="/" extends="struts-default">
+	<action name="modifyUserInfo" class="lzf.action.UserAction" method="doModifyUserInfo">
+		<result name="success">/modifyUserInfoSuccess.jsp</result>
+	</action>
+</package>
+<package name="delMyMessage" namespace="/" extends="struts-default">
+	<action name="delMyMessage" class="lzf.action.UserAction" method="doDelMyMessage">
+		<result name="success">/delMyMessageSuccess.jsp</result>
+	</action>
+</package>
+<package name="topMessage" namespace="/" extends="struts-default">
+	<action name="topMessage" class="lzf.action.UserAction" method="doTopMessage">
+		<result name="success">/topMessageSuccess.jsp</result>
+	</action>
+</package>
+<package name="privateSpace" namespace="/" extends="struts-default">
+	<action name="privateSpace" class="lzf.action.UserAction" method="privateSpace">
+		<result name="success">/privateSpace.jsp</result>
+	</action>
+</package>
+<package name="userManage" namespace="/" extends="struts-default">
+	<action name="userManage" class="lzf.action.UserAction" method="getAllUser">
+		<result name="success">/userManagePage.jsp</result>
+	</action>
+</package>
+<package name="delUser" namespace="/" extends="struts-default">
+	<action name="delUser" class="lzf.action.UserAction" method="delUser">
+		<result name="success">/delUserSuccess.jsp</result>
+	</action>
+</package>
+<package name="changePic" namespace="/" extends="struts-default">
+	<action name="changePic" class="lzf.action.UserAction" method="changePic">
+		<result name="success">/changePicSuccess.jsp</result>
+	</action>
+</package>
+<package name="logout" namespace="/" extends="struts-default">
+	<action name="logout" class="lzf.action.UserAction" method="logout">
+		<result name="success">/login.jsp</result>
+	</action>
+</package>
+<package name="modifyUserHobby" namespace="/" extends="struts-default">
+	<action name="modifyUserHobby" class="lzf.action.UserAction" method="modifyUserHobby">
+		<result name="success">/modifyUserHobby.jsp</result>
+	</action>
+</package>
+<package name="saveInfo" namespace="/" extends="struts-default">
+	<action name="saveInfo" class="lzf.action.UserAction" method="saveInfo">
+		<result name="success">/saveInfoSuccess.jsp</result>
+	</action>
+</package>
+<package name="getSingleHobby" namespace="/" extends="struts-default">
+	<action name="getSingleHobby" class="lzf.action.UserAction" method="getSingleHobby">
+		<result name="success">/singleHobby.jsp</result>
+	</action>
+</package>
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false" 
+		/> <constant name="struts.devMode" value="true" /> <package name="default" 
+		namespace="/" extends="struts-default"> <default-action-ref name="index" 
+		/> <global-results> <result name="error">/error.jsp</result> </global-results> 
+		<global-exception-mappings> <exception-mapping exception="java.lang.Exception" 
+		result="error"/> </global-exception-mappings> <action name="index"> <result 
+		type="redirectAction"> <param name="actionName">HelloWorld</param> <param 
+		name="namespace">/example</param> </result> </action> </package> <include 
+		file="example.xml"/> -->
+    <!-- Add packages here -->
+
+</struts>
